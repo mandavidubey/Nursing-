@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* ########## utility classes ########## */
+.container{
+    width: 100%;
+}
+.text-blue{
+    color: rgba(0, 0, 255, 0.753);
+    opacity: 100%;
+}
+.text-gray{
+    color: rgba(51, 51, 51, 0.74);
+}
+.text-white{
+    color: #fff;
+    opacity: 100%;
+}
+.text-green{
+    color: rgba(16, 235, 16, 0.808);
+}
+.text-darkblue{
+    color: rgba(0, 0, 139, 0.884);
+}
+/* ###### header styling #######  */
+#header{
+    background: url("./img/backgroundindex.jpg");
+    background-position: center;
+    background-size:cover;
+    width:auto;
+    height: 97vh;
+}
+.showcase{
+    background: linear-gradient(rgba(36, 4, 75, 0.3),rgba(0, 0, 0, 0.7));
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    text-align: center;
+    font-size: 2rem;
+}
+/* ########### navbar styling ###########  */
+/* for desktop mode  */
+.navbar input[type='checkbox'],
+.navbar .hamburger-lines{
+    display: none;
+}
+.navbar{
+    background-image: url("./img/Nursing\ Logo.png");
+    background-repeat:round;
+    box-shadow: 0px 5px 10px 0px rgb(50, 50, 183);
+    position:relative;
+    width:auto;
+    height: 20%;
+    opacity: 0.70;
+    z-index: 999;
+}
+.navbar-container{
+    display:none;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+.navbar a:hover{
+    color: #117964;
+    border-bottom: 0.15em solid #117964;
+}
+.registration {    
+    align-items: center;    
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 3em;
+    padding: 0.5em;
+    background: rgba(0, 0, 0, 0.068);
+    opacity: 100%;
+}
+.registration h3{
+    color: red;
+}
+.registration a:hover{
+    border-bottom: 0.1em solid blue;
+}
+.registration a{
+    text-decoration: none;
+    display: inline-block;
+    color: blue;
+    padding-bottom: 0;
+}
+/* ########## media queries ##########  */
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+    .navbar-container input[type="checkbox"],
+    .navbar-container .hamburger-lines{
+        display: block;
+    }
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 72px;
+    }
+    .navbar-container input[type="checkbox"]{
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 40px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 32px;
+        width: 40px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .navbar-container .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+    }
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line2{        
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        height: 80vh;
+        max-width: 300px;
+        transform: translateX(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0 10px 0 #aaa;
+    }
+    .navbar .menu-items li{
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .logo{
+        position: absolute;
+        top: 1px;
+        right: 15px;   
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateX(0);
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+    .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }    
+}
+/* ########## small screen ########  */
+@media (max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+}
+/* ######### landscpe mode ######## */
+@media (orientation: landscape) and (max-height: 500px){
+    .showcase{
+        /* border: 6px solid red; */
+        height: 36vmax;
+    }
+}

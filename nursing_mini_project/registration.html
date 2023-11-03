@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registrationstyle.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <!-- Main div code -->
+	<div id="main">
+        <div class="h-tag">
+        <h2>Create Your Account</h2>
+        </div>
+        <!-- create account div -->
+        <div class="login">
+        <table cellspacing="2" align="center" cellpadding="8" border="0">
+        <tr>
+        <td align="right">Full Name :</td>
+        <td><input type="text" placeholder="Enter your full name" class="tb" /></td>
+        </tr>
+        <tr>
+        <td align="right">Email ID :</td>
+        <td><input type="text" placeholder="Enter Email ID here" class="tb" /></td>
+        </tr>
+        <tr>    
+        <td align="right">Password :</td>
+        <td><input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more 
+        characters" required></td>
+        </tr>
+        <td align="right">Confirm Password :</td>
+        <td><input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more 
+        characters" required></td>
+        </tr>
+        <tr>    
+        <td align="right">Designation :</td>
+        <td><input type="text" placeholder="Enter your designation" class="tb" /></td>
+        </tr>
+        <tr>
+        <td align="right">Years of Experience :</td>
+        <td><input type="number" placeholder="Enter your years of experience" class="tb" /></td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>
+        <input type="reset" value="Clear Form" id="res" class="btn" />
+        <a href="login.html">
+        <input type="submit" value="Create Account" class="btn" /></td></a>
+        </tr>
+        </table>
+        </div>
+        <!-- create account box ending here.. -->
+        </div>
+        <!-- Main div ending here... -->
+</body>
+</html>
